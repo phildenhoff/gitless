@@ -8,4 +8,8 @@
 from . import file_cmd
 
 
-parser = file_cmd.parser('stop tracking changes to files', 'untrack', ['un'])
+parser = file_cmd.parser(
+        'stop tracking changes to files',
+        'untrack',
+        ['un', 'forget', 'fo']
+)
