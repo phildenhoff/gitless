@@ -15,13 +15,13 @@ def parser(subparsers, _):
       'remote', help=desc, description=desc.capitalize(), aliases=['rt'])
   remote_parser.add_argument(
       '-c', '--create', nargs='?', help='create remote', dest='remote_name',
-      metavar='remote')
+      metavar='remote_name')
   remote_parser.add_argument(
       'remote_url', nargs='?',
       help='the url of the remote (only relevant if a new remote is created)')
   remote_parser.add_argument(
       '-d', '--delete', nargs='+', help='delete remote(es)', dest='delete_r',
-      metavar='remote')
+      metavar='remote_name')
   remote_parser.add_argument(
       '-rn', '--rename', nargs='+',
       help='renames the specified remote: accepts two arguments '
