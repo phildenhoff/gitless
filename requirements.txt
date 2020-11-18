@@ -2,3 +2,4 @@
 
 argcomplete>=1.11.1
 pygit2==1.2.0  # requires libgit2 1.0.x
+halo

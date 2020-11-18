@@ -18,6 +18,7 @@ import shutil
 import sys
 
 import pygit2
+from halo import Halo
 
 from subprocess import run, CalledProcessError
 
@@ -74,7 +75,8 @@ def init_repository(url=None, only=None, exclude=None):
       return repo
 
     try:
-      git('clone', url, cwd)
+      with Halo(text="Cloning repository", spinner="dots"):
+        git('clone', url, cwd)
     except CalledProcessError as e:
       raise GlError(e.stderr)
 
